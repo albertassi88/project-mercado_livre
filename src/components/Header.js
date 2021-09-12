@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import TodoContext from '../context/TodoContext';
 import * as BsIcons from 'react-icons/bs';
-import * as AiIcons from 'react-icons/ai';
 import { useHistory } from 'react-router-dom';
 
 import '../Css/Header.css';
@@ -26,7 +25,6 @@ function Header() {
                     /> 
                     <div className="header">          
                         <BsIcons.BsSearch onClick={() => { setBusca(product); setProduct('') }}/> 
-                        <AiIcons.AiOutlineShoppingCart />                
                     </div>
                 </div>
                 : <div className="container-header" style={{padding: '41px'}} />}                                                                

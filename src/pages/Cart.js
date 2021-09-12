@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import '../Css/Cart.css';
 
 function Cart() {
-    const { details, cart, updateCart, price, setPrice, removedCart } = useContext(ToContext); 
+    const { details, cart, updateCart, price, removedCart } = useContext(ToContext); 
     let { sumTotal, subtractTotal } = useContext(ToContext);
 
     function renderCart() {
@@ -26,7 +26,6 @@ function Cart() {
                         <p>+</p>                    
                     </Link>
                     <h3>{element.price * element.quant}</h3> 
-                    {/* { price === 0 && setPrice(element.price)}                  */}
                     <button onClick={ () => { removedCart(index); subtractTotal(element.price * element.quant); } }>Excluir</button>                
                 </div>
             )
