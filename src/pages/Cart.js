@@ -17,7 +17,8 @@ function Cart() {
                     <p>{element.title}</p>
                     <p>{element.price}</p>
                     {element.quant > 0 &&
-                    <Link onClick={ () => { updateCart(element.title, element.quant - 1); subtractTotal(element.price) } }>
+                    <Link 
+                        onClick={ () => { updateCart(element.title, element.quant - 1); subtractTotal(element.price) } }>
                         <p>-</p>                    
                     </Link>
                     }                   
@@ -26,7 +27,10 @@ function Cart() {
                         <p>+</p>                    
                     </Link>
                     <h3>{element.price * element.quant}</h3> 
-                    <button onClick={ () => { removedCart(index); subtractTotal(element.price * element.quant); } }>Excluir</button>                
+                    <button 
+                        onClick={ () => { removedCart(index); subtractTotal(element.price * element.quant); } }>
+                        Excluir
+                    </button>                
                 </div>
             )
         })

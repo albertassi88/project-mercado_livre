@@ -8,7 +8,6 @@ import '../Css/Header.css';
 function Header() {
     const { setBusca } = useContext(TodoContext);
     const [product, setProduct] = useState('');
-
     const history = useHistory().location;
     const pathName = history.pathname;
 
@@ -31,7 +30,6 @@ function Header() {
             </div>
         )
     }
-
 
     return(
         <div>
